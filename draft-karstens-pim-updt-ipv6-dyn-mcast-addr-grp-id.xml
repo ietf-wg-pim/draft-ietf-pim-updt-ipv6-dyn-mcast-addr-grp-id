@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="rfc7991bis.rnc"?>
+<!DOCTYPE rfc [
+  <!ENTITY nbsp "&#160;">
+]>
+<?rfc toc="yes"?>
+<?rfc tocompact="yes"?>
+<?rfc tocdepth="3"?>
+<?rfc tocindent="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc comments="yes"?>
+<?rfc inline="yes"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<rfc
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  category="std"
+  docName="draft-karstens-pim-updt-ipv6-dyn-mcast-addr-grp-id-00"
+  ipr="trust200902"
+  submissionType="IETF"
+  consensus="true">
+
+  <front>
+    <title abbrev="Dynamic IPv6 Mcast Addr Group ID Updates">Updates to Dynamic IPv6 Multicast Address Group IDs</title>
+
+    <author fullname="Nate Karstens" initials="N" surname="Karstens">
+      <organization>Garmin International</organization>
+
+      <address>
+        <email>nate.karstens@gmail.com</email>
+      </address>
+    </author>
+
+    <author fullname="Dino Farinacci" initials="D" surname="Farinacci">
+      <organization>lispers.net</organization>
+
+      <address>
+        <email>farinacci@gmail.com</email>
+      </address>
+    </author>
+
+    <author fullname="Mike McBride" initials="M" surname="McBride">
+      <organization>Futurewei</organization>
+
+      <address>
+        <email>michael.mcbride@futurewei.com</email>
+      </address>
+    </author>
+
+    <date day="24" month="July" year="2023"/>
+
+    <abstract>
+      <t>Describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. Recommends replacing these allocations with a new table in the IPv6 Multicast Address Space Registry, to be managed by IANA and updated by RFC. Suggests initial contents of the new table: a reduced allocation for MADCAP (RFC2730) and solicited-node multicast addresses (which were not previously noted in RFC3307).</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section title="Introduction">
+      <t><xref target="RFC3307" sectionFormat="of" section="2"/> defines the lower 32 bits of the IPv6 address, which are mapped directly to the link-layer, as the group ID, and then assigns ranges of group ID values based on how they are allocated. Section <xref target="RFC3307" sectionFormat="bare" section="4.3"/> describes dynamic assignment of group ID values and lists two different approaches (server allocation and host allocation). However, both approaches are assigned the same range of group ID values, which means they cannot coexist without risking an address collision. Also concerning is that the range for dynamic assignment overlaps with the range used for solicited-node multicast addresses (see <xref target="RFC4291" sectionFormat="of" section="2.7.1"/>).</t>
+      
+      <t>Only one server allocation protocol has been defined so far (see <xref target="RFC2730"/>), but <xref target="I-D.karstens-pim-zeroconf-mcast-addr-alloc-ps"/> advocates developing a decentralized, zero-configuration host allocation protocol. This document updates the dynamic IPv6 multicast group ID ranges to better align with current practices for protocol number assignment and to support development of additional dynamic allocation protocols.</t>
+      
+      <section anchor="requirements">
+        <name>Requirements Language</name>
+        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in all capitals, as shown here.</t>
+      </section>
+    </section>
+
+    <section title="Updated Dynamic Multicast Group IDs">
+      <t>Existing group ID allocations specified in <xref target="RFC3307" sectionFormat="comma" section="4.3"/> and <xref target="RFC4291" sectionFormat="comma" section="2.7.1"/> are summarized in the following table:</t>
+
+      <table>
+        <name>Existing Allocations</name>
+        <tbody>
+          <tr>
+            <td><br/><br/><tt>0x80000000</tt>-<tt>0xFEFFFFFF</tt><br/><br/><br/></td>
+            <td><!--Empty--></td>
+            <td rowspan="2"><br/><br/>Server allocation (MADCAP)</td>
+            <td rowspan="2"><br/><br/>Host allocation</td>
+          </tr>
+          <tr>
+            <td><tt>0xFF000000</tt>-<tt>0xFFFFFFFF</tt></td>
+            <td>Solicited-node</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <t>This document updates the allocations in <xref target="RFC3307" sectionFormat="comma" section="4.3"/> and moves them into a new registry in the IPv6 Multicast Address Space Registry registry group. The registry shall be populated with the following entries:</t>
+
+      <table anchor="groupIDs">
+        <name>Updated Allocations</name>
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><tt>0x80000000</tt>-<tt>0x8FFFFFFF</tt></td>
+            <td>MADCAP</td>
+            <td><xref target="RFC2730"/></td>
+          </tr>
+          <tr>
+            <td><tt>0x90000000</tt>-<tt>0xFEFFFFFF</tt></td>
+            <td>Reserved</td>
+            <td><!--Empty--></td>
+          </tr>
+          <tr>
+            <td><tt>0xFF000000</tt>-<tt>0xFFFFFFFF</tt></td>
+            <td>Solicited-node multicast addresses</td>
+            <td><xref target="RFC4291" sectionFormat="comma" section="2.7.1"/></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <t>This reduces the range previously available for MADCAP, while still providing a sizable allocation. In addition, this documents the range used for solicited-node multicast addresses and reserves the remaining entries for future protocol development.</t>
+    </section>
+
+    <section title="Security Considerations">
+      <t>This document does not expand on any security considerations beyond what is discussed in <xref target="RFC3307"/>.</t>
+    </section>
+
+    <section title="IANA Considerations">
+      <t>IANA should create a new registry named "Dynamic Multicast Group IDs" in the "IPv6 Multicast Address Space Registry" registry group. This registry shall initially contain the entries listed in <xref target="groupIDs"/>. The "Standards Action" registration policy is required to update the registry.</t>
+    </section>
+
+    <section title="Acknowledgement">
+      <t>Special thanks to the National Marine Electronics Association for their contributions in developing marine industry standards and their support for this research.</t>
+
+      <t>Thanks also to the members of the PIM working group for their early brainstorming sessions and review of this draft.</t>
+    </section>
+  </middle>
+
+  <back>
+    <references title="Normative References">
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2119.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3307.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml"/>
+    </references>
+    <references title="Informative References">
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2730.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4291.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.karstens-pim-zeroconf-mcast-addr-alloc-ps.xml"/>
+    </references>
+  </back>
+</rfc>
