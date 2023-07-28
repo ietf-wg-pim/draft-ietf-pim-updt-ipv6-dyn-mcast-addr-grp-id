@@ -16,7 +16,8 @@
 <rfc
   xmlns:xi="http://www.w3.org/2001/XInclude"
   category="std"
-  docName="draft-karstens-pim-updt-ipv6-dyn-mcast-addr-grp-id-01"
+  docName="draft-karstens-pim-updt-ipv6-dyn-mcast-addr-grp-id-02"
+  updates="3307"
   ipr="trust200902"
   submissionType="IETF"
   consensus="true">
@@ -48,7 +49,7 @@
       </address>
     </author>
 
-    <date day="25" month="July" year="2023"/>
+    <date day="28" month="July" year="2023"/>
 
     <abstract>
       <t>Describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. Recommends replacing these allocations with a new registry in the IPv6 Multicast Address Space Registry registry group. Suggests initial contents of the new registry: a reduced allocation for MADCAP (RFC2730) and solicited-node multicast addresses (which were not previously noted in RFC3307).</t>
@@ -125,12 +126,16 @@
 
     <section title="IANA Considerations">
       <t>IANA should create a new registry named "Dynamic Multicast Group IDs" in the "IPv6 Multicast Address Space Registry" registry group. This registry shall initially contain the entries listed in <xref target="groupIDs"/>. The "Standards Action" registration policy is required to update the registry.</t>
+
+      <t>IANA should also update the references to "<tt>FF3X:0:0:0:0:0:8000:0-FF3X:0:0:0:0:0:FFFF:FFFF</tt>" in the "Unicast-based (Including SSM) Multicast Group IDs" registry in the "IPv6 Multicast Address Space Registry" registry group. The registration procedure should indicate that this range uses dynamic assignment according to the protocols listed in the new "Dynamic Multicast Group IDs" registry and include a reference to this document. The description in the registry entry should indicate that this range uses dynamic assignment according to the protocols listed in the new "Dynamic Multicast Group IDs" registry and the reference should be changed to this document.</t>
     </section>
 
     <section title="Acknowledgement">
       <t>Special thanks to the National Marine Electronics Association for their contributions in developing marine industry standards and their support for this research.</t>
 
       <t>Thanks also to the members of the PIM working group for their early brainstorming sessions and review of this draft.</t>
+
+      <t>Finally, thanks to Dave Thaler for discussing MADCAP deployment in Microsoft products and the impact of changing the range of group IDs used by MADCAP.</t>
     </section>
   </middle>
 
