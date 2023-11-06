@@ -16,7 +16,7 @@
 <rfc
   xmlns:xi="http://www.w3.org/2001/XInclude"
   category="std"
-  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-00"
+  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-01"
   updates="3307"
   ipr="trust200902"
   submissionType="IETF"
@@ -49,7 +49,7 @@
       </address>
     </author>
 
-    <date day="28" month="September" year="2023"/>
+    <date day="6" month="November" year="2023"/>
 
     <abstract>
       <t>Describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. Recommends replacing these allocations with a new registry in the IPv6 Multicast Address Space Registry registry group. Suggests initial contents of the new registry: a reduced allocation for MADCAP (RFC2730) and solicited-node multicast addresses (which were not previously noted in RFC3307).</t>
@@ -58,9 +58,9 @@
 
   <middle>
     <section title="Introduction">
-      <t><xref target="RFC3307" sectionFormat="of" section="2"/> defines the lower 32 bits of the IPv6 address, which are mapped directly to the link-layer, as the group ID, and then assigns ranges of group ID values based on how they are allocated. Section <xref target="RFC3307" sectionFormat="bare" section="4.3"/> describes dynamic assignment of group ID values and lists two different approaches (server allocation and host allocation). However, both approaches are assigned the same range of group ID values, which means they cannot coexist without risking an address collision. Also concerning is that the range for dynamic assignment overlaps with the range used for solicited-node multicast addresses (see <xref target="RFC4291" sectionFormat="of" section="2.7.1"/>).</t>
+      <t>For IPv6 multicast addresses, <xref target="RFC3307" sectionFormat="of" section="2"/> defines the lower 32 bits of the IPv6 address, which are mapped directly to the link-layer, as the group ID, and then assigns ranges of group ID values based on how they are allocated. Section <xref target="RFC3307" sectionFormat="bare" section="4.3"/> describes dynamic assignment of group ID values and lists two different approaches (server allocation and host allocation). However, both approaches are assigned the same range of group ID values, which means they cannot coexist without risking an address collision. Also concerning is that the range for dynamic assignment overlaps with the range used for solicited-node multicast addresses (see <xref target="RFC4291" sectionFormat="of" section="2.7.1"/>).</t>
       
-      <t>Only one server allocation protocol has been defined so far (see <xref target="RFC2730"/>), but <xref target="I-D.karstens-pim-zeroconf-mcast-addr-alloc-ps"/> advocates developing a decentralized, zero-configuration host allocation protocol. This document updates the dynamic IPv6 multicast group ID ranges to better align with current practices for protocol number assignment and to support development of additional dynamic allocation protocols.</t>
+      <t>Only one server allocation protocol has been defined so far (see <xref target="RFC2730"/>), but <xref target="I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps"/> advocates developing a decentralized, zero-configuration host allocation protocol. This document updates the dynamic IPv6 multicast group ID ranges to better align with current practices for protocol number assignment and to support development of additional dynamic allocation protocols.</t>
       
       <section anchor="requirements">
         <name>Requirements Language</name>
@@ -148,7 +148,7 @@
     <references title="Informative References">
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2730.xml"/>
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.4291.xml"/>
-      <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.karstens-pim-zeroconf-mcast-addr-alloc-ps.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps.xml"/>
     </references>
   </back>
 </rfc>
