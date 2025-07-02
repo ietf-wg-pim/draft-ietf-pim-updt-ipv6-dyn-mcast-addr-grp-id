@@ -26,25 +26,37 @@
     <title abbrev="Dynamic IPv6 Mcast Addr Group ID Updates">Updates to Dynamic IPv6 Multicast Address Group IDs</title>
 
     <author fullname="Nate Karstens" initials="N" surname="Karstens">
-      <organization>Garmin International</organization>
-
+      <organization>Garmin International, Inc.</organization>
       <address>
+        <postal>
+          <street>1200 E. 151st St.</street>
+          <city>Olathe</city>
+          <region>KS</region>
+          <code>66062-3426</code>
+          <country>United States of America</country>
+        </postal>
         <email>nate.karstens@gmail.com</email>
       </address>
     </author>
 
     <author fullname="Dino Farinacci" initials="D" surname="Farinacci">
       <organization>lispers.net</organization>
-
       <address>
+        <postal>
+          <city>San Jose</city>
+          <region>CA</region>
+          <country>United States of America</country>
+        </postal>
         <email>farinacci@gmail.com</email>
       </address>
     </author>
 
     <author fullname="Mike McBride" initials="M" surname="McBride">
       <organization>Futurewei</organization>
-
       <address>
+        <postal>
+          <country>United States of America</country>
+        </postal>
         <email>michael.mcbride@futurewei.com</email>
       </address>
     </author>
