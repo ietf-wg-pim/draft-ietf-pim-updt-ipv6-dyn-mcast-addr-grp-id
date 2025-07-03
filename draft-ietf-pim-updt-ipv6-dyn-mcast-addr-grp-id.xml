@@ -16,7 +16,7 @@
 <rfc
   xmlns:xi="http://www.w3.org/2001/XInclude"
   category="std"
-  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-04"
+  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-05"
   updates="3307"
   ipr="trust200902"
   submissionType="IETF"
@@ -61,7 +61,7 @@
       </address>
     </author>
 
-    <date day="8" month="May" year="2025"/>
+    <date day="2" month="July" year="2025"/>
 
     <abstract>
       <t>Describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. Recommends replacing these allocations with a new registry in the IPv6 Multicast Address Space Registry registry group. Suggests initial contents of the new registry: a reduced allocation for MADCAP (RFC2730) and solicited-node multicast addresses (which were not previously noted in RFC3307).</t>
