@@ -16,7 +16,7 @@
 <rfc
   xmlns:xi="http://www.w3.org/2001/XInclude"
   category="std"
-  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-05"
+  docName="draft-ietf-pim-updt-ipv6-dyn-mcast-addr-grp-id-06"
   updates="3307"
   ipr="trust200902"
   submissionType="IETF"
@@ -26,7 +26,7 @@
     <title abbrev="Dynamic IPv6 Mcast Addr Group ID Updates">Updates to Dynamic IPv6 Multicast Address Group IDs</title>
 
     <author fullname="Nate Karstens" initials="N" surname="Karstens">
-      <organization>Garmin International, Inc.</organization>
+      <organization abbrev="Garmin">Garmin International, Inc.</organization>
       <address>
         <postal>
           <street>1200 E. 151st St.</street>
