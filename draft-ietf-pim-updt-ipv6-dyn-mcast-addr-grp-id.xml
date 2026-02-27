@@ -64,7 +64,7 @@
     <date day="26" month="February" year="2026"/>
 
     <abstract>
-      <t>This document describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. It recommends replacing these allocations with a new IANA registry in the IPv6 Multicast Address Space registry group. The document also defines initial contents of the new registry: a reduced allocation for MADCAP (RFC2730), a range for SSM, a Private Use range, and Solicited-Node multicast addresses (which were not previously noted in RFC3307, Allocation Guidelines for IPv6 Multicast Addresses).</t>
+      <t>This document describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. It recommends replacing these allocations with a new IANA registry in the IPv6 Multicast Address Space registry group. The document also defines initial contents of the new registry: a reduced allocation for MADCAP (RFC2730), a range for SSM, a Private Use range, a range for Experimental Use, and Solicited-Node multicast addresses (which were not previously noted in RFC3307, Allocation Guidelines for IPv6 Multicast Addresses).</t>
     </abstract>
   </front>
 
@@ -138,13 +138,18 @@
             <td><!--Empty--></td>
           </tr>
           <tr>
-            <td><tt>0xF0000000</tt>-<tt>0xFDFFFFFF</tt></td>
+            <td><tt>0xF0000000</tt>-<tt>0xFCFFFFFF</tt></td>
             <td>Host allocation of SSM group addresses</td>
             <td><!--TODO: Replace with this document-->[This document]</td>
           </tr>
           <tr>
-            <td><tt>0xFE000000</tt>-<tt>0xFEFFFFFF</tt></td>
+            <td><tt>0xFD000000</tt>-<tt>0xFDFFFFFF</tt></td>
             <td>Private Use</td>
+            <td><!--TODO: Replace with this document-->[This document]</td>
+          </tr>
+          <tr>
+            <td><tt>0xFE000000</tt>-<tt>0xFEFFFFFF</tt></td>
+            <td>Experimental Use</td>
             <td><!--TODO: Replace with this document-->[This document]</td>
           </tr>
           <tr>
@@ -155,7 +160,7 @@
         </tbody>
       </table>
 
-      <t>This reduces the range previously available for MADCAP, while still providing a sizable allocation. It also allocates ranges for SSM and for Private Use. The Private Use range can be used in isolated deployments for purposes such as manual address allocation or experimentation with new dynamic allocation protocols. Finally, this documents the range used for Solicited-Node multicast addresses. All remaining entries are reserved for future assignment as new protocols are developed.</t>
+      <t>This reduces the range previously available for MADCAP, while still providing a sizable allocation. It also allocates ranges for SSM, Private Use, and Experimental Use. The Private Use range can be used in isolated deployments for purposes such as manual address allocation. The Experimental Use range may be used for experimentation with new dynamic allocation protocols. There are no restrictions on experimental scope; these IDs may be used to run experiments over the open Internet. Finally, this documents the range used for Solicited-Node multicast addresses. All remaining entries are reserved for future assignment as new protocols are developed.</t>
     </section>
 
     <section title="Operational Considerations">
