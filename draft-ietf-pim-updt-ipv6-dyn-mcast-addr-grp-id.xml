@@ -81,9 +81,9 @@
     </section>
 
     <section title="Considerations for Source-Specific Multicast">
-      <t>One of the benefits of Source-Specific Multicast (SSM) listed in <xref target="RFC4607" sectionFormat="of" section="1"/> is "[avoiding] the need for inter-host coordination when choosing source-specific addresses". SSM allows a host to subscribe to channel (S,G) and only receive packets for destination address G that are from source address S. This reduces the need for coordinated dynamic assignment of G because multiple distinct hosts could use the same value for G and traffic would still be directed to the node that requested the stream.</t>
+      <t>One of the benefits of Source-Specific Multicast (SSM) listed in <xref target="RFC4607" sectionFormat="of" section="1"/> is "[avoiding] the need for inter-host coordination when choosing source-specific addresses". SSM allows a host to subscribe to channel (S,G) and only receive packets for destination address G that are from source address S. This reduces the need for coordinated dynamic assignment of G because multiple distinct hosts could use the same value for G and traffic would still be directed to the node that requested the stream (see <xref target="RFC8815" sectionFormat="comma" section="3.2.2"/>).</t>
       
-      <t>However, SSM is not universally supported (<xref target="RFC4607" sectionFormat="comma" section="6"/> lists one example). This document defines a range of dynamic IPv6 multicast group IDs for use in environments that do support SSM.</t>
+      <t>However, SSM is not universally supported (see <xref target="RFC4607" sectionFormat="comma" section="6"/> and <xref target="RFC8815" sectionFormat="comma" section="3.1"/>). This document defines a range of dynamic IPv6 multicast group IDs for use in environments that do support SSM.</t>
     </section>
 
     <section title="Updated Dynamic Multicast Group IDs">
@@ -204,6 +204,7 @@
     </references>
     <references title="Informative References">
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2908.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8815.xml"/>
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps.xml"/>
     </references>
   </back>
