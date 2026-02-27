@@ -74,6 +74,8 @@
 
       <t>Only one server allocation protocol has been defined at the time of writing (see <xref target="RFC2730"/>), but <xref target="I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps"/> advocates developing a decentralized, zero-configuration host allocation protocol. This document updates <xref target="RFC3307" sectionFormat="of" section="4.3"/> to allow multiple dynamic allocation protocols to coexist on the same network, and so that dynamic IPv6 multicast group ID ranges better align with current practices for protocol number assignment.</t>
 
+      <t>This document adheres to the IPv multicast address architecture outlined in <xref target="RFC4291" />, <xref target="RFC3307" />, <xref target="RFC7371" />, et al.</t>
+
       <section anchor="requirements">
         <name>Requirements Language</name>
         <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/> when, and only when, they appear in all capitals, as shown here.</t>
@@ -209,6 +211,7 @@
     </references>
     <references title="Informative References">
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2908.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.7371.xml"/>
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.8815.xml"/>
       <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps.xml"/>
     </references>
