@@ -74,7 +74,7 @@
 
       <t>Only one server allocation protocol has been defined at the time of writing (see <xref target="RFC2730"/>), but <xref target="I-D.ietf-pim-zeroconf-mcast-addr-alloc-ps"/> advocates developing a decentralized, zero-configuration host allocation protocol. This document updates <xref target="RFC3307" sectionFormat="of" section="4.3"/> to allow multiple dynamic allocation protocols to coexist on the same network, and so that dynamic IPv6 multicast group ID ranges better align with current practices for protocol number assignment.</t>
 
-      <t>This document adheres to the IPv multicast address architecture outlined in <xref target="RFC4291" />, <xref target="RFC3307" />, <xref target="RFC7371" />, et al.</t>
+      <t>This document adheres to the IPv6 multicast address architecture outlined in <xref target="RFC4291" />, <xref target="RFC3307" />, <xref target="RFC7371" />, et al.</t>
 
       <section anchor="requirements">
         <name>Requirements Language</name>
