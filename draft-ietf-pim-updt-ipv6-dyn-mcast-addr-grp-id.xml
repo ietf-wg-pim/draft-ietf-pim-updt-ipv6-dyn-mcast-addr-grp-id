@@ -170,12 +170,12 @@
       <t>IANA should create a new registry named "Dynamic Multicast Group IDs" in the "IPv6 Multicast Address Space" registry group. The "Standards Action" registration policy is required to update the registry. Each entry in the registry contains the following fields:</t>
 
       <ol>
-        <li>Range<br />A range of 32-bit values rendered in hexadecimal. Values MUST be within the range for dynamic multicast address allocation mechanisms specified in <xref target="RFC3307"/>: <tt>0x80000000</tt> to <tt>0xFFFFFFFF</tt>.</li>
+        <li>Range<br />A range of 32-bit values rendered in hexadecimal. Values must be within the range <tt>0x80000000</tt> to <tt>0xFFFFFFFF</tt>.</li>
         <li>Description<br />A description or protocol name assigned to the range.</li>
         <li>Reference<br />A document describing the assignment.</li>
       </ol>
 
-      <t>The registry shall initially contain the entries listed in <xref target="groupIDs"/>.</t>
+      <t>The registry shall initially contain the entries listed in <xref target="groupIDs"/>, and shall list both <xref target="RFC3307"/> and this document as references.</t>
 
       <t>IANA should also update the references to "<tt>FF3X:0:0:0:0:0:8000:0-FF3X:0:0:0:0:0:FFFF:FFFF</tt>" in the "Unicast-based (Including SSM) Multicast Group IDs" registry in the "IPv6 Multicast Address Space" registry group. The registration procedure should indicate that this range uses dynamic assignment according to the protocols listed in the new "Dynamic Multicast Group IDs" registry and include a reference to this document. The description in the registry entry should indicate that this range uses dynamic assignment according to the protocols listed in the new "Dynamic Multicast Group IDs" registry and the reference should be changed to this document.</t>
     </section>
