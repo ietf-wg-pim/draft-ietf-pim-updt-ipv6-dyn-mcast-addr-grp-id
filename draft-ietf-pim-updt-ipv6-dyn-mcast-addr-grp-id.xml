@@ -158,6 +158,10 @@
       <t>This reduces the range previously available for MADCAP, while still providing a sizable allocation. It also allocates ranges for SSM and for Private Use. The Private Use range can be used in isolated deployments for purposes such as manual address allocation or experimentation with new dynamic allocation protocols. Finally, this documents the range used for Solicited-Node multicast addresses. All remaining entries are reserved for future assignment as new protocols are developed.</t>
     </section>
 
+    <section title="Operational Considerations">
+      <t>This document reduces the range of group ID values available for MADCAP (<xref target="RFC2730"/>). At the time of writing, there is only one known implementation of MADCAP, and there are no known large-scale deployments. Any implementations of MADCAP (known or otherwise) should be updated to reflect the new group ID range set forth in <xref target="groupIDs"/>. Any existing deployments of MADCAP should either use an updated implementation or operate in an environment without other IPv6 multicast address allocation protocols.</t>
+    </section>
+
     <section title="Security Considerations">
       <t>This document does not expand on any security considerations beyond what is discussed in <xref target="RFC3307"/> and <xref target="RFC2908"/>.</t>
     </section>
