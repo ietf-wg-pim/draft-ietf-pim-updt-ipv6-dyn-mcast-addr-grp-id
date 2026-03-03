@@ -64,7 +64,7 @@
     <date day="27" month="February" year="2026"/>
 
     <abstract>
-      <t>This document describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307. It recommends replacing these allocations with a new IANA registry in the IPv6 Multicast Address Space registry group. The document also defines initial contents of the new registry: a reduced allocation for the Multicast Address Dynamic Client Allocation Protocol (MADCAP; RFC2730), a range for SSM, a Private Use range, a range for Experimental Use, and Solicited-Node multicast addresses (which were not previously noted in RFC3307, Allocation Guidelines for IPv6 Multicast Addresses).</t>
+      <t>This document describes limitations of the existing range of dynamic IPv6 multicast addresses specified in RFC3307, Allocation Guidelines for IPv6 Multicast Addresses. It updates RFC3307 by replacing these allocations with a new IANA registry in the IPv6 Multicast Address Space registry group. The document also defines initial contents of the new registry: a reduced allocation for the Multicast Address Dynamic Client Allocation Protocol (MADCAP; RFC2730), a range for SSM, a Private Use range, a range for Experimental Use, and Solicited-Node multicast addresses (which were not previously noted in RFC3307).</t>
     </abstract>
   </front>
 
